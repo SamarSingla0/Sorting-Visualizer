@@ -1,0 +1,117 @@
+/* ===== Global Reset & Base Style ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ===== Title Bar ===== */
+.title-bar {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Main App Container ===== */
+.app-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1rem;
+}
+
+/* ===== Left Controls Panel ===== */
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* so it doesn't stretch vertically */
+  gap: 0.8rem; /* slightly smaller gap */
+  padding: 1rem; /* reduced padding */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  height: 600px; /* ↓ reduced height */
+}
+
+.controls button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.controls button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ===== Graph Container ===== */
+.graph-container {
+  width:1400px;               /* Fixed width - adjust as needed */
+  height: 600px;              /* Fixed height - adjust as needed */
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;           /* Ensures the container never grows! */
+  min-width: 0;
+  min-height: 0;
+}
+
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;               /* Always fill .graph-container vertically */
+  width: 100%;
+  overflow-x: auto;           /* Scroll horizontally if contents overflow */
+  overflow-y: hidden;
+  padding: 16px;              /* Padding inside graph, optional */
+  box-sizing: border-box;
+}
+
+.array-bar {
+  flex: 0 0 3px;              /* Fixed width for all bars; change as needed */
+  min-width: 3px;
+  margin: 0 1px;
+  background-color: turquoise;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.15s, background-color 0.15s;
+  height: 100px;              /* Height will be overridden inline via React */
+}
+
+
