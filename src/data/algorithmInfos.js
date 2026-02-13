@@ -1,3 +1,8 @@
+// Metadata for each supported sorting algorithm:
+// - name: human‑friendly label
+// - time_complexity: best / average / worst with an associated Tailwind color class
+// - space_complexity: worst‑case space usage + color class
+// - description: multi‑line explanation rendered under the visualizer
 const algorithmInfos = {
 	bubble_sort: {
 		name: "Bubble Sort",
